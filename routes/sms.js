@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var accountSid = 'ACb40d3b9b432b6b576d445ec137002ee4'; // Your Account SID from www.twilio.com/console
-var authToken = '7cdda3b8cff79fc06d77cf7d7ce361d9';   // Your Auth Token from www.twilio.com/console
+var accountSid = process.env.ACCOUNT_SID || 'ACb40d3b9b432b6b576d445ec137002ee4'; // Your Account SID from www.twilio.com/console
+var authToken = process.env.AUTH_TOKEN || '7cdda3b8cff79fc06d77cf7d7ce361d9';   // Your Auth Token from www.twilio.com/console
 var countries = require('country-data').countries;
 //const client = require('twilio')(accountSid, authToken);
 
